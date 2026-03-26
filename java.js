@@ -6,7 +6,7 @@ WINDOWED ALERTS - window.alert(`67`);
 document.getElementById("h1").textContent = `hello`;
 document.getElementById("p1").textContent = `hello`;
 */
-/*Variables
+/* Variables
 1. declaration - let x;
 2. assignment - x = 100;
 3. both together - let x = 123;
@@ -38,9 +38,27 @@ let students = 30;
 students = students / 2 - this would give a result of 15
 students = students % 2 - this would give a result of 0
 */
-/* Augmented Assignment Operators
+/* Augmented Assignment Operators (Math Shortcuts)
 let number = 30;
 number += 1; - result is 31
 number *= 2; - result is 60
 this can be applied with ALL math functions (+ - * / % etc.)
+number++; - results in number + 1
+number--; - number -1
 */
+/* Basic User Input Accept
+let username;
+username = window.prompt(`Enter Username`)
+console.log(username);
+*/
+/* Textbox User Input Accept
+also seen in html file
+*/
+
+let username;
+
+document.getElementById("myButton").onclick = function(){
+  username = document.getElementById("myText").value;
+  console.log(username);
+  document.getElementById("myp1").textContent = username;
+}
