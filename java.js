@@ -54,11 +54,10 @@ console.log(username);
 /* Textbox User Input Accept
 also seen in html file
 */
-
-let username;
+let number;
 
 document.getElementById("myButton").onclick = function(){
-  username = document.getElementById("myText").value;
-  console.log(username);
-  document.getElementById("myp1").textContent = username;
+  number = document.getElementById("myText").value;
+  console.log(number);
+  document.getElementById("myp1").textContent = `You are Thinking of the Number ${number}.`;
 }
