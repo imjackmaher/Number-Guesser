@@ -56,6 +56,12 @@ also seen in html file
 */
 let number;
 
+const btn = document.getElementById("myButton");
+document.addEventListener(`keydown`, function(event){
+  if (event.key === `Enter`){
+    btn.click();
+  }
+})
 document.getElementById("myButton").onclick = function(){
   number = document.getElementById("myText").value;
   console.log(number);
