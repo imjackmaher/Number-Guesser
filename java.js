@@ -57,13 +57,28 @@ also seen in html file
 let number;
 
 const btn = document.getElementById("myButton");
-document.addEventListener(`keydown`, function(event){
-  if (event.key === `Enter`){
+
+document.addEventListener("keydown", function(event){
+  if (event.key === "Enter"){
     btn.click();
   }
-})
+});
+
+
+
 document.getElementById("myButton").onclick = function(){
-  number = document.getElementById("myText").value;
-  console.log(number);
-  document.getElementById("myp1").textContent = `You are Thinking of the Number ${number}.`;
-}
+  let input = document.getElementById("myText").value;
+
+  if (input.trim() === "") {
+    document.getElementById("myp1").textContent = "";
+    return;
+  }
+  
+  number = Number(input);
+
+  if (isNaN(number)) { //this part is kinda useless now because i limited it to number only input in html file
+    document.getElementById("myp1").textContent = "That is not a number.";
+  } else {
+    document.getElementById("myp1").textContent = `You are thinking of the number ${number}.`;
+  }
+};

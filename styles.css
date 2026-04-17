@@ -49,3 +49,10 @@ body{
     border-radius: 5px;
     border: 2px solid rgb(0,0,0);
 }
+
+/* below this is limiting the input to numbers but it just removes the arrows */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
