@@ -58,14 +58,14 @@ let number;
 
 const btn = document.getElementById("myButton");
 
-// Pressing Enter key triggers button click
 document.addEventListener("keydown", function(event){
   if (event.key === "Enter"){
     btn.click();
   }
 });
 
-// Your original submit logic
+
+
 document.getElementById("myButton").onclick = function(){
   let input = document.getElementById("myText").value;
 
@@ -76,56 +76,9 @@ document.getElementById("myButton").onclick = function(){
   
   number = Number(input);
 
-  if (isNaN(number)) {
+  if (isNaN(number)) { //this part is kinda useless now because i limited it to number only input in html file
     document.getElementById("myp1").textContent = "That is not a number.";
   } else {
     document.getElementById("myp1").textContent = `You are thinking of the number ${number}.`;
-
-    document.getElementById("myText").value = ""; // ADDED: clear input after submit
   }
 };
-
-
-
-// ==========================
-// 🔢 ADDED: KEYPAD FUNCTIONALITY
-// ==========================
-
-const input = document.getElementById("myText");
-const keypad = document.getElementById("keypad");
-
-input.addEventListener("input", () => {
-  input.value = input.value.replace(/[^0-9.]/g, "");
-});
-
-// Show keypad when clicking input
-input.addEventListener("click", () => {
-  keypad.classList.remove("hidden");
-});
-
-// Handle keypad button clicks
-document.querySelectorAll("#keypad button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const value = btn.dataset.value;
-
-    if (value === "clear") {
-      input.value = "";
-    } 
-    else if (value === "back") {
-      input.value = input.value.slice(0, -1);
-    } 
-    else if (value === "enter") {
-      document.getElementById("myButton").click(); // uses your submit logic
-    } 
-    else {
-      input.value += value;
-    }
-  });
-});
-
-// Hide keypad when clicking outside
-document.addEventListener("click", (e) => {
-  if (!document.querySelector(".input-container").contains(e.target)) {
-    keypad.classList.add("hidden");
-  }
-});

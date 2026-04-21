@@ -1,0 +1,58 @@
+body{
+  font-family: 'Verdana', sans-serif;
+  font-size: 2em;
+}
+.myp1{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.username-label{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.username-input{
+  background-color: rgb(176,224,230);
+    color: black;
+    height: 30px;
+    width:200px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    border-color: rgb(0,0,0);
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.welcome-text{
+  text-decoration: underline;
+  text-decoration-color: rgb(176,224,230);
+}
+.myButton {
+    background-color: rgb(176,224,230);
+    color: black;
+    height: 36px;
+    width:100px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    border-color: rgb(0,0,0);
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.myButton:hover {
+    background-color: rgb(176,200,255);
+    box-shadow: 0 3px 0 rgb(176,224,255);
+}
+.myButton:active {
+    transform: translateY(3px);
+    background-color: rgb(200,200,230);
+    box-shadow: 3px 3px 3px rgb(200,200,250);
+    border-radius: 5px;
+    border: 2px solid rgb(0,0,0);
+}
+
+/* below this is limiting the input to numbers but it just removes the arrows */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
